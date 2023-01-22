@@ -1,0 +1,46 @@
+@import '../styles/template/components.scss';
+
+.wrap {
+    @extend %wrap;
+}
+.main_block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block {
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+    margin: 15px 10px;
+}
+
+.icon_wrap {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    padding-right: 15px;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+}
+
+.info_block {
+    width: 85%;
+    padding-left: 15px;
+}
+
+.title {
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.text {
+    @extend %paragraph;
+}

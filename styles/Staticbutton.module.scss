@@ -1,0 +1,27 @@
+@import '../styles/template/color.scss';
+.btn_wrap {
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    perspective: 400px;
+    perspective-origin: center;
+    &:hover {
+        .btn {
+            transform: rotateX(360deg);
+            backface-visibility: visible;
+            background-color: $orange;
+            color: white;
+        }
+    }
+}
+
+.btn {
+    border: 1.5px solid $orange;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+    padding: 10px 40px;
+    color: $orange;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 1.5s;
+}

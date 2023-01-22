@@ -1,0 +1,49 @@
+@import '../styles/template/color.scss';
+
+.text {
+    color: $textcolor;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+// .wrap {
+//     display: flex;
+//     background-color: aliceblue;
+//     padding: 50px;
+//     border-radius: 25px;
+// }
+
+.item {
+    margin: 0px 25px;
+    font-weight: 900;  
+    cursor: pointer;
+    position: relative;
+    color: $textcolor;
+    margin: 0px 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: -6px;
+    background-color: $red;
+}
+
+.link {
+    text-decoration: none;
+    color: $textcolor;
+    &:hover {
+        color: rgba(255,0,0);
+    }
+}

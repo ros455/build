@@ -1,0 +1,41 @@
+@import '../styles/template/components.scss';
+
+.wrap {
+    @extend %wrap;
+}
+
+.first_block {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: flex-start;
+}
+
+.line {
+    @extend %line;
+}
+
+.first_title {
+    @extend %first_title;
+}
+
+.second_title {
+    @extend %second_title;
+}
+
+.second_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.image_wrapper {
+    margin: 30px 50px;
+    width: 15%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}

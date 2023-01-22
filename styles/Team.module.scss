@@ -1,0 +1,37 @@
+@import '../styles/template/color.scss';
+@import '../styles/template/components.scss';
+.wrap {
+    @extend %wrap;
+}
+
+.first_block {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: flex-start;
+}
+
+.second_block {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    @extend %line;
+}
+
+.first_title {
+    @extend %first_title;
+}
+
+.second_title {
+    @extend %second_title;
+}
+
+.paragraph {
+    @extend %paragraph;
+}

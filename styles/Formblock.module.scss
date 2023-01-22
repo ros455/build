@@ -1,0 +1,100 @@
+@import '../styles/template/components.scss';
+@import '../styles/template/color.scss';
+
+.wrap {
+    @extend %wrap;
+    box-shadow: 1px 1px 0px 1px white;
+    padding: 10px 0px;
+}
+
+.first_title {
+    @extend %first_title;
+}
+
+.second_title {
+    @extend %second_title;
+}
+
+.line {
+    @extend %line;
+}
+
+.text {
+    span {
+        color: $orange;
+        &:hover {
+            color: $textcolor;
+            cursor: pointer;
+        }
+    }
+}
+
+.first_block {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.second_block {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+.input {
+    margin: 50px 0px;
+    @extend %input;
+}
+
+.textarea {
+    border: 1px solid grey;
+    height: 200px;
+    resize: none;
+    @extend %input;
+}
+
+.button_block {
+    width: 100%;
+}
+
+.button {        
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    border: 1px solid $orange;
+    background-color: rgba(0,0,0,0);
+    color: $orange;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+    transition: 2s;
+    border-radius: 5px;
+    padding: 5px 30px;
+
+    &:hover {
+        background-color: $orange;
+        color: white;
+    }
+}
+
+.button_active {
+    animation-name:live;
+}
+
+@keyframes live{
+
+  0%{
+    left: 0%;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    left: 100%;
+    opacity: 0;
+  }
+  }
