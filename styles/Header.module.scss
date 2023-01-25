@@ -1,25 +1,41 @@
 @import '../styles/template/color.scss';
 
+
 .text {
     color: $textcolor;
     margin: 0px;
     cursor: pointer;
 }
 
+.logo {
+    color: $textcolor;
+    margin: 0px;
+    cursor: pointer;
+    letter-spacing: 4px;
+    font-size: 26px;
+    font-weight: 600;
+    transition: 1s;
+    &:hover {
+        color: rgba(255,0,0);
+    }
+    @media(max-width: 650px) {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+} 
+
 .navigation {
     display: flex;
-    // align-items: center;
-    // justify-content: space-around;
     justify-content: flex-end;
     width: 100%;
+    font-size: 20px;
+    @media(max-width: 992px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 60px;
+    }
 }
-
-// .wrap {
-//     display: flex;
-//     background-color: aliceblue;
-//     padding: 50px;
-//     border-radius: 25px;
-// }
 
 .item {
     margin: 0px 25px;
@@ -42,7 +58,10 @@
 
 .link {
     text-decoration: none;
-    color: $textcolor;
+}
+
+.item {
+    transition: 1s;
     &:hover {
         color: rgba(255,0,0);
     }

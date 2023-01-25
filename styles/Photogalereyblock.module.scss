@@ -10,6 +10,9 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    @media(max-width: 992px) {
+        width: 47%;
+    }
 }
 
 .image {

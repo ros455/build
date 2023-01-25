@@ -3,7 +3,7 @@ import style from '../styles/Footer.module.scss'
  const Footer = () => {
   return (
     <footer className={style.wrapper}>
-        Footer
+        @2023
     </footer>
   )
 }

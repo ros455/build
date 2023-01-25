@@ -4,6 +4,12 @@
     color: white;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    @media(max-width: 992px) {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .block {
@@ -16,6 +22,21 @@
     border-radius: 5px;
     border: 1px solid rgba(255,136,0,1);;
     margin: 0px 20px;
+
+    @media(max-width: 992px) {
+        margin: 0px 10px;
+        width: 30%;
+    }
+
+    @media(max-width: 860px) {
+        width: 60%;
+        margin: 10px 0px;
+    }
+
+    @media(max-width: 500px) {
+        width: 80%;
+        margin: 10px 0px;
+    }
 }
 
 .title {
@@ -41,7 +62,7 @@
 .btn {
     // border: 1.5px solid $orange;
     border: none;
-    background-color: rgba(33, 37, 41, 1);
+    background-color: rgba(33, 37, 41, 0);
     transition: 0.5s;
     padding: 10px 40px;
     color: $orange;
@@ -49,9 +70,10 @@
     letter-spacing: 2px;
     transition: 1.5s;
     margin: 40px 0px;
+    border-radius: 5px;
     &:hover {
         background-color: rgba(255,136,0,0);
-        box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
+        box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
         color: white;
     }
 

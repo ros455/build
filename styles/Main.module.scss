@@ -1,7 +1,9 @@
+@import '../styles/template/color.scss';
+
 .wrap {
-    background-color: rgb(33,37,41);
-    // width: 100%;
+    background-color: $bc;
 }
+
 .button_wrap {
     display: flex;
     align-items: center;

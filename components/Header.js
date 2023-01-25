@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
-import { motion } from 'framer-motion';
+import { Navbar, Container } from 'react-bootstrap'
 import style from '../styles/Header.module.scss'
 import Link from 'next/link';
 const Header = () => {
@@ -16,12 +15,14 @@ const Header = () => {
             link: 'service'
         },
     ])
-    const [activeIndex, setActive] = useState(0);
     return (
         <>
             <Navbar variant='dark' bg="dark" expand="lg">
                 <Container>
-                    <h1 className={style.text}>Logotype</h1>
+                    <Link href='/'
+                    className={style.link}>
+                    <p className={style.logo}>BUILDING COMPANY</p>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <div className={style.navigation}>
@@ -30,15 +31,11 @@ const Header = () => {
                                 href={el.link} 
                                 className={style.link}
                                 key={el.name}>
-                                    <motion.div
-                                        key={index}
-                                        onClick={() => setActive(index)}
-                                        className={style.item}
-                                        initial={{ color: '#000' }}
-                                        animate={{ color: activeIndex == index ? 'rgba(255,0,0)' : '#fcfcfc' }}>
-                                        {activeIndex == index && <ActiveLine />}
+                                    <div
+                                        key={el.name}
+                                        className={style.item}>
                                         {el.name}
-                                    </motion.div>
+                                    </div>
                                 </Link>
                             ))}
                         </div>
@@ -49,38 +46,4 @@ const Header = () => {
     );
 };
 
-function ActiveLine() {
-    return (
-        <motion.span
-            className={style.line}
-            layoutId='activeItem' />
-    )
-}
-
 export default Header;
-
-
-
-// const Header = () => {
-//     const [headerLink] = useState([
-//         'Home','About','Services','Blog'
-//     ])
-//     return (
-//         <>
-//             <Navbar variant='dark' bg="dark" expand="lg">
-//                 <Container>
-//                     <h1 className={style.text}>Logotype</h1>
-//                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                     <Navbar.Collapse id="basic-navbar-nav">
-//                         <div className={style.navigation}>
-//                             <p className={style.text}>Home</p>
-//                             <p className={style.text}>About</p>
-//                             <p className={style.text}>Services</p>
-//                             <p className={style.text}>Blog</p>
-//                         </div>
-//                     </Navbar.Collapse>
-//                 </Container>
-//             </Navbar>
-//         </>
-//     );
-// };

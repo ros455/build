@@ -24,6 +24,10 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
+    @media(max-width: 992px) {
+      padding: 10px 25px;
+    }
 }
 
 @keyframes live{

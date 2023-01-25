@@ -1,14 +1,14 @@
 import React from 'react';
-import style from '../styles/Blockabout.module.scss'
+import style from '../styles/BlockAbout.module.scss'
 import { motion } from 'framer-motion';
 
 const textSFirstAnimation = {
     hidden: {
-        x: -100,
+        y: 50,
         opacity: 0,
     },
     visible: custom => ({
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: { delay: custom * 0.5 },
     }),
@@ -17,11 +17,11 @@ const textSFirstAnimation = {
 
 const textSecondAnimation = {
     hidden: {
-        x: 300,
+        y: 50,
         opacity: 0,
     },
     visible: custom => ({
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: { delay: custom * 0.5 },
     }),
@@ -42,7 +42,7 @@ const BlockAbout = () => {
                 <motion.p
                     className={style.second_title}
                     variants={textSFirstAnimation}
-                    custom={1.5}>WE CREATEAND TURN INTO REALITY</motion.p>
+                    custom={1.5}>WE CREATE AND TURN INTO REALITY</motion.p>
                 <motion.span
                     variants={textSecondAnimation}
                     custom={2}></motion.span>

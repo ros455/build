@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 const textSFirstAnimation = {
     hidden: {
-        x: -100,
+        x: -30,
         opacity: 0,
     },
     visible: custom => ({
@@ -17,7 +17,7 @@ const textSFirstAnimation = {
 
 const textSecondAnimation = {
     hidden: {
-        x: 300,
+        x: 30,
         opacity: 0,
     },
     visible: custom => ({
