@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/BlockAbout.module.scss'
+import style from '../styles/Blockabout.module.scss'
 import { motion } from 'framer-motion';
 
 const textSFirstAnimation = {
